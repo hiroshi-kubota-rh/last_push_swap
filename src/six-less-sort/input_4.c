@@ -51,7 +51,7 @@ void    sub_input_4(t_node **a, t_node **b)
         push_b(a, b);
     }
     if (min_place == 1)
-        push_a(a, b);
+        push_b(a, b);
 }
 
 

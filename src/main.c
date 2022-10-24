@@ -49,7 +49,7 @@ int     main(int argc, char **argv)
 
 
 //stackの中身表示
-/*
+
     int i = 1;
     t_node *tmp = stack_a;
     while( stack_a != NULL)
@@ -58,7 +58,7 @@ int     main(int argc, char **argv)
         i++;
         stack_a = stack_a->next;
     }
-*/
+
 
 
     //mainから辿れるメモリはメモリリークにならない(leaksコマンドなら)
