@@ -20,6 +20,6 @@ void    six_less_sort(t_node **a, t_node **b, size_t len)
         input_3(a);
     if (len == 4)
         input_4(a, b);
-//    if (len == 5)
-//        input_5(a);
+    if (len == 5)
+        input_5(a, b);
 }

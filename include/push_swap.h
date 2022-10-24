@@ -85,6 +85,7 @@ size_t      get_smallest_ele_place(t_node *stack);
 
 
 void    sub_input_4(t_node **a, t_node **b);
+void    input_5(t_node **a, t_node **b);
 
 /*------------------------ error ---------------------------------*/
 void        error(t_node *stack_a, t_node *stack_b, t_info *info);

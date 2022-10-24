@@ -50,14 +50,14 @@ int     main(int argc, char **argv)
 
 //stackの中身表示
 
-    int i = 1;
-    t_node *tmp = stack_a;
-    while( stack_a != NULL)
-    {
-        printf("i = %d value = %d index = %zu\n", i, stack_a->value, stack_a->index);
-        i++;
-        stack_a = stack_a->next;
-    }
+//    int i = 1;
+//    t_node *tmp = stack_a;
+//    while( stack_a != NULL)
+//    {
+//        printf("i = %d value = %d index = %zu\n", i, stack_a->value, stack_a->index);
+//        i++;
+//        stack_a = stack_a->next;
+//    }
 
 
 

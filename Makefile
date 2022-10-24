@@ -21,6 +21,7 @@ SRSC =	src/main.c \
 		src/six-less-sort/input_2.c \
 		src/six-less-sort/input_3.c \
 		src/six-less-sort/input_4.c \
+		src/six-less-sort/input_5.c \
 		src/six-less-sort/six_less_sort.c \
 		src/utils/ft_atoi.c \
 		src/utils/ft_isint.c \

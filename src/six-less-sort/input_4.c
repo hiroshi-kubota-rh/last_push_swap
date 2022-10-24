@@ -14,19 +14,24 @@
 
 size_t    get_smallest_ele_place(t_node *stack)
 {
+    size_t  i;
+    size_t  tmp;
     size_t  place;
 
+    i = 1;
     place = 1;
-    while (stack != NULL)
+    tmp = stack->index;
+    while (stack->next != NULL)
     {
-        if (stack->index == 1)
+        i++;
+        if (tmp > stack->next->index)
         {
-            return (place);
+            place = i;
+            tmp = stack->next->index;
         }
-        place++;
         stack = stack->next;
     }
-    return (0);
+    return (place);
 }
 
 void    sub_input_4(t_node **a, t_node **b)
