@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ans_addback.c                                   :+:      :+:    :+:   */
+/*   push_not_sorted_to_b.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khiroshi </var/mail/khiroshi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,20 +12,17 @@
 
 #include "push_swap.h"
 
-void    ft_ans_addback(t_ans **ans, t_ans *new)
+void    push_not_sorted_to_b(t_node **a, t_node **b, size_t len)
 {
-    t_ans  *last;
+    size_t  i;
 
-    if (*ans == NULL)
+    i = 0;
+    while (i < len)
     {
-        *ans = new;
-        return ;
+        if ((*a)->sorted == 1)
+            rotate_a(a);
+        else
+            push_b(a, b);
+        i++;
     }
-    last = *ans;
-    while (last->next != NULL)
-    {
-        last = last->next;
-    }
-    last->next = new;
-    return ;
 }

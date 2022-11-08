@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ans_new.c                                       :+:      :+:    :+:   */
+/*   ft_node_len.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khiroshi </var/mail/khiroshi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,13 +12,15 @@
 
 #include "push_swap.h"
 
-t_ans    *ft_ans_new(char  *rule)
+size_t  ft_node_len(t_node  *node)
 {
-    t_ans   *new;
-    new = (t_ans *)malloc(sizeof(t_ans));
-    if (new == NULL)
-        return (NULL);
-    new->rule = rule;
-    new->next = NULL;
-    return new;
+    size_t  len;
+
+    len = 0;
+    while (node != NULL)
+    {
+        node = node->next;
+        len++;
+    }
+    return (len);
 }

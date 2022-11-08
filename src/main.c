@@ -29,17 +29,12 @@ int     main(int argc, char **argv)
     }
     else
     {
-//          sub_input_4(&stack_a, &stack_b);
-        six_less_sort(&stack_a, &stack_b, info.num_array_len);
+        if (info.num_array_len < 6)
+            six_less_sort(&stack_a, &stack_b, info.num_array_len);
+        else
+            sort(&stack_a, &stack_b, info.num_array_len);
     }
-//    if (info.num_array_len <= 5)
-//    {
-//        six_less_sort(&stack_a, &stack_b, &info);
-//    }
-//    else
-//    {
-//        push_swap(&stack_a, &stack_b, &info);
-//    }
+
 
 //    printf("inout type = %d\n", info.input_type);
 //
@@ -50,15 +45,22 @@ int     main(int argc, char **argv)
 
 //stackの中身表示
 
-//    int i = 1;
-//    t_node *tmp = stack_a;
-//    while( stack_a != NULL)
-//    {
-//        printf("i = %d value = %d index = %zu\n", i, stack_a->value, stack_a->index);
-//        i++;
-//        stack_a = stack_a->next;
-//    }
-
+    int i = 1;
+    t_node *tmp = stack_a;
+    while( stack_a != NULL)
+    {
+        printf("i = %d, value = %d, index = %zu, sorted = %s\n", i, stack_a->value, stack_a->index, (stack_a->sorted ? "true" : "false" ));
+        i++;
+        stack_a = stack_a->next;
+    }
+    i = 1;
+    printf("\n\nstack-b\n");
+    while( stack_b != NULL)
+    {
+        printf("i = %d, value = %d, index = %zu, sorted = %s\n", i, stack_b->value, stack_b->index, (stack_b->sorted ? "true" : "false" ));
+        i++;
+        stack_b = stack_b->next;
+    }
 
 
     //mainから辿れるメモリはメモリリークにならない(leaksコマンドなら)

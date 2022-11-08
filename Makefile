@@ -23,10 +23,15 @@ SRSC =	src/main.c \
 		src/six-less-sort/input_4.c \
 		src/six-less-sort/input_5.c \
 		src/six-less-sort/six_less_sort.c \
+		src/sort/permu.c \
+		src/sort/push_not_sorted_to_b.c \
+		src/sort/set_sorted.c \
+		src/sort/sort.c \
 		src/utils/ft_atoi.c \
 		src/utils/ft_isint.c \
 		src/utils/ft_memcpy.c \
 		src/utils/ft_node_addback.c \
+		src/utils/ft_node_len.c \
 		src/utils/ft_node_new.c \
        	src/utils/ft_split.c \
 		src/utils/ft_strlen.c
