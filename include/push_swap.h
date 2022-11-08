@@ -26,9 +26,6 @@ typedef struct  s_node
     size_t			index;
     bool 			sorted;//すでにsort済みかどうかの確認
     struct s_node	*next;
-    size_t          place;
-    size_t          r_num; //回す回数
-
 }               t_node;
 
 typedef struct  s_info

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 
 //stack aを整列させる
@@ -66,7 +67,7 @@ size_t  count_tmp_rb(t_node *a, t_node *b)
     sub.flag = false;
     sub.tmp = UINT_MAX;
     tmp_a = a;
-    while (a != NULL)
+    while (tmp_a != NULL)
     {
         sub.diff = tmp_a->index - b->index;
         if (sub.diff < sub.tmp && sub.diff > 0)
@@ -87,14 +88,14 @@ size_t  count_tmp_rb(t_node *a, t_node *b)
 size_t  count_rb(t_node **a, t_node *tmp_b, size_t *r_num)
 {
     t_node  *tmp_a;
-    size_t  a_len;
+    size_t  alen;
     size_t  count;
 
     tmp_a = *a;
-    a_len = ft_node_len(tmp_a);
+    alen = ft_node_len(tmp_a);
     count = count_tmp_rb(tmp_a, tmp_b);
-    if (count > a_len / 2)
-        (*r_num) = a_len - count;
+    if (count > alen / 2)
+        (*r_num) = alen - count;
     else
         (*r_num) = count;
     return count;
@@ -109,13 +110,11 @@ void    get_info_for_insert(t_node **a, t_node *tmp_b, t_insert *ins)
         ins->r_num = 0;
         tmp_a = *a;
         ins->ins_tmp = count_rb(&tmp_a, tmp_b, &ins->r_num);
-        tmp_b->place = ins->ins_tmp;
         if (ins->i > ins->blen/2)
             ins->r_num_b = ins->blen - ins->i;
         else
             ins->r_num_b = ins->i;
         ins->r_num = ins->r_num + ins->r_num_b;
-        tmp_b->r_num = ins->r_num;
         if (ins->tmp > ins->r_num)
         {
             ins->tmp = ins->r_num;
@@ -228,6 +227,6 @@ void    sort(t_node **a, t_node **b, size_t len)
     push_not_sorted_to_b(a, b, len);
     while ((*b) != NULL)
         insert_to_a(a, b);
-//    alignment_stack_a(a, len);
+    alignment_stack_a(a, len);
 }
 
