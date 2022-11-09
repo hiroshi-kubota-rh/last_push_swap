@@ -219,12 +219,12 @@ void    sort(t_node **a, t_node **b, size_t len)
 {
     t_permu p;
 
-    p.v_len = permulen_value(a, &p.v_head_place);
+//    p.v_len = permulen_value(a, &p.v_head_place);
     p.i_len = permulen_index(a, &p.i_head_place);
-    if (p.v_len > p.i_len)
-        set_sorted_by_value(a, p.v_head_place);
-    else
-        set_sorted_by_index(a, p.i_head_place);
+//    if (p.v_len > p.i_len)
+//        set_sorted_by_value(a, p.v_head_place);
+//    else
+    set_sorted_by_index(a, p.i_head_place);
     push_not_sorted_to_b(a, b, len);
     while ((*b) != NULL)
         insert_to_a(a, b);
