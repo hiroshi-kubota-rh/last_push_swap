@@ -69,8 +69,8 @@ size_t  count_tmp_rb(t_node *a, t_node *b)
     tmp_a = a;
     while (tmp_a != NULL)
     {
-        sub.diff = tmp_a->index - b->index;
-        if (sub.diff < sub.tmp && sub.diff > 0)
+        sub.diff = tmp_a->index - b->index; //size_tの引数．
+        if (sub.diff < sub.tmp && tmp_a->index > b->index)
         {
             sub.tmp = sub.diff;
             sub.i_place = sub.index;
