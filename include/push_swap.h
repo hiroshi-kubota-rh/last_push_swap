@@ -69,9 +69,9 @@ typedef struct  s_sub_insert
 {
     size_t  index;
     size_t  i_place;
-    size_t  tmp;
+    int  tmp;
     bool    flag;
-    size_t  diff;
+    int  diff;
 }               t_sub_insert;
 
 typedef struct  s_exe

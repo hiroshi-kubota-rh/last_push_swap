@@ -36,10 +36,12 @@ void    alignment_stack_a(t_node **a, size_t len)
 size_t  biggest_element(t_node **a)
 {
     t_node  *tmp;
+    t_node  *tmp_2;
     size_t  max;
     size_t  i;
 
     tmp = *a;
+    tmp_2 = *a;
     max = 0;
     while (tmp != NULL)
     {
@@ -48,11 +50,10 @@ size_t  biggest_element(t_node **a)
         tmp = tmp->next;
     }
     i = 1;
-    tmp = *a;
-    while (tmp->index != max)
+    while (tmp_2->index != max)
     {
         i++;
-        tmp = tmp->next;
+        tmp_2 = tmp_2->next;
     }
     return i;
 }
@@ -65,12 +66,12 @@ size_t  count_tmp_rb(t_node *a, t_node *b)
     sub.index = 0;
     sub.i_place = 0;
     sub.flag = false;
-    sub.tmp = UINT_MAX;
+    sub.tmp = INT_MAX;
     tmp_a = a;
     while (tmp_a != NULL)
     {
-        sub.diff = tmp_a->index - b->index; //size_tの引数．
-        if (sub.diff < sub.tmp && tmp_a->index > b->index)
+        sub.diff = (int)(tmp_a->index - b->index); //size_tの引き算
+        if (sub.diff < sub.tmp && sub.diff > 0)
         {
             sub.tmp = sub.diff;
             sub.i_place = sub.index;
@@ -80,7 +81,7 @@ size_t  count_tmp_rb(t_node *a, t_node *b)
         sub.index++;
     }
     if (sub.flag == false)
-        sub.i_place = biggest_element(&tmp_a);
+        sub.i_place = biggest_element(&a);
     return (sub.i_place);
 }
 
