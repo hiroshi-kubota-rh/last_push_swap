@@ -9,6 +9,7 @@ SRSC =	src/main.c \
 		src/error/flash_stack.c \
 		src/input/check_argc.c \
 		src/input/check_num_array.c \
+		src/input/check_sorted.c \
 		src/input/coordinate_compression.c \
 		src/input/fill_stack_a.c \
 		src/input/make_stack.c \
@@ -23,6 +24,9 @@ SRSC =	src/main.c \
 		src/six-less-sort/input_4.c \
 		src/six-less-sort/input_5.c \
 		src/six-less-sort/six_less_sort.c \
+		src/sort/alignment_stack_a.c \
+		src/sort/biggest_element.c \
+		src/sort/execute_insert.c \
 		src/sort/permu.c \
 		src/sort/push_not_sorted_to_b.c \
 		src/sort/set_sorted.c \
@@ -46,7 +50,7 @@ OBJS := $(SRSC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	@echo "$(_RED)Removing object files....$(_END)"
@@ -57,5 +61,8 @@ fclean:
 	@rm	-f $(NAME)
 	@rm -f $(OBJS)
 
+re:
+
+
 %.o: %.c $(HEADERPATH)
-	$(CC) -c -I./include -o $@ $<
+	$(CC) $(CFLAGS) -c -I./include -o $@ $<

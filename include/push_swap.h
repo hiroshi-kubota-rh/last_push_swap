@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdbool.h>
-# include <stdio.h>
 
 
 typedef struct  s_node
@@ -91,6 +90,7 @@ bool            ft_isSameNum(int *num, size_t len);
 void            fill_stack_a(t_node **head_a, t_info *info);
 void            make_stack(int argc, char **argv, t_node **head_a, t_info *info);
 void            coordinate_compression(t_node *stack, t_info *info);
+bool            check_sorted(t_node *stack);
 
 
 /*------------------------- utils folder -------------------------*/
@@ -133,6 +133,8 @@ void            set_sorted_by_index(t_node **a, size_t h_p);
 void            set_sorted_by_value(t_node **a, size_t h_p);
 void            push_not_sorted_to_b(t_node **a, t_node **b, size_t len);
 void            alignment_stack_a(t_node **a, size_t len);
+void            execute_insert(t_node **a, t_node **b, t_insert ins);
+size_t          biggest_element(t_node **a);
 void            sort(t_node **a, t_node **b, size_t len);
 
 

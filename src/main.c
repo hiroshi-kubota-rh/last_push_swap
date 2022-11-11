@@ -36,33 +36,6 @@ int     main(int argc, char **argv)
     }
 
 
-//    printf("inout type = %d\n", info.input_type);
-//
-//    char **test = info.num_array;
-//    printf("info.num_array[1] = %s\n", test[1]);
-//    printf("info.num_array_len = %ld\n", info.num_array_len);
-
-
-//stackの中身表示
-
-//    int i = 1;
-//    t_node *tmp = stack_a;
-//    while( stack_a != NULL)
-//    {
-//        printf("i = %d, value = %d, index = %zu, sorted = %s\n", i, stack_a->value, stack_a->index, (stack_a->sorted ? "true" : "false" ));
-//        i++;
-//        stack_a = stack_a->next;
-//    }
-//    i = 1;
-//    printf("\n\nstack-b\n");
-//    while( stack_b != NULL)
-//    {
-//        printf("i = %d, value = %d, index = %zu, sorted = %s\n", i, stack_b->value, stack_b->index, (stack_b->sorted ? "true" : "false" ));
-//        i++;
-//        stack_b = stack_b->next;
-//    }
-
-
     //mainから辿れるメモリはメモリリークにならない(leaksコマンドなら)
 //    flash_all_struct(tmp, NULL, &info);
 //    system("leaks push_swap");
@@ -73,16 +46,7 @@ int     main(int argc, char **argv)
 
 
 
-bool    check_sorted(t_node *stack)
-{
-    while(stack->next != NULL)
-    {
-        if (stack->value > stack->next->value)
-            return (false);
-        stack = stack->next;
-    }
-    return (true);
-}
+
 
 
 
