@@ -13,7 +13,7 @@
 #include "push_swap.h"
 #include <stdio.h>
 
-int     main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     t_node  *stack_a;
     t_node  *stack_b;
@@ -22,7 +22,6 @@ int     main(int argc, char **argv)
     stack_a = NULL;
     stack_b = NULL;
     make_stack(argc, argv, &stack_a, &info);
-
     if (check_sorted(stack_a))
     {
         exit(0);
