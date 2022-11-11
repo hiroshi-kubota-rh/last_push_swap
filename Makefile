@@ -50,7 +50,7 @@ OBJS := $(SRSC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	@echo "$(_RED)Removing object files....$(_END)"
@@ -65,4 +65,4 @@ re:
 
 
 %.o: %.c $(HEADERPATH)
-	$(CC) -c -I./include -o $@ $<
+	$(CC) $(CFLAGS) -c -I./include -o $@ $<

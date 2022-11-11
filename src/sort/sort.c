@@ -98,7 +98,7 @@ void    sort(t_node **a, t_node **b, size_t len)
 {
     t_permu p;
 
-    p.i_len = permulen_index(a, &p.i_head_place);
+    permulen_index(a, &p.i_head_place);
     set_sorted_by_index(a, p.i_head_place);
     push_not_sorted_to_b(a, b, len);
     while ((*b) != NULL)
