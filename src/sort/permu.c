@@ -64,11 +64,11 @@ static size_t  sub_permulen_index(t_node   **tmp_head)
 {
     t_node  *m;
     size_t  count;
-    size_t     tmp;
+    int     tmp;
 
     m = *tmp_head;
     count = 1;
-    tmp = m->index;
+    tmp = m->value;
     while (m->next != NULL)
     {
         m = m->next;
