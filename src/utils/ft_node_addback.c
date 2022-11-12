@@ -5,29 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: khiroshi </var/mail/khiroshi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 09:57:45 by khiroshi          #+#    #+#             */
-/*   Updated: 2022/10/12 09:59:56 by khiroshi         ###   ########.fr       */
+/*   Created: 2022/11/12 00:34:33 by khiroshi          #+#    #+#             */
+/*   Updated: 2022/11/12 00:35:30 by khiroshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_node_addback(t_node **node, t_node *new)
+void	ft_node_addback(t_node **node, t_node *new)
 {
-    t_node  *last;
+	t_node	*last;
 
-    if (*node == NULL)
-    {
-        *node = new;
-        return ;
-    }
-    last = *node;
-    while (last->next != NULL)
-    {
-        last = last->next;
-    }
-    last->next = new;
-    return ;
+	if (*node == NULL)
+	{
+		*node = new;
+		return ;
+	}
+	last = *node;
+	while (last->next != NULL)
+	{
+		last = last->next;
+	}
+	last->next = new;
+	return ;
 }
 
 //
