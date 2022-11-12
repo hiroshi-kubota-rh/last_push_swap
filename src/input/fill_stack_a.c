@@ -25,6 +25,7 @@ void	fill_stack_a(t_node **stack_a, t_info *info)
 		{
 			error(*stack_a, NULL, info);
 		}
+        new->sorted = false;
 		ft_node_addback(stack_a, new);
 		i++;
 	}
