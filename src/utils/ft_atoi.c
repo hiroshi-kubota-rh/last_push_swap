@@ -24,9 +24,13 @@ int	ft_atoi(char *s)
 		return (false);
 	if (*s == '+' || *s == '-')
 	{
+        if (ft_strlen(s) == 1)
+            return (false);
 		if (*s++ == '-')
 			minus = -1;
 	}
+    if (minus == -1 && ft_strlen(s) == 1)
+        return (false);
 	while ('0' <= *s && *s <= '9')
 		result = ((*s++) - '0') + result * 10;
 	result = result * minus;

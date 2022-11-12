@@ -24,6 +24,8 @@ bool	ft_is_int(char *s)
 		return (false);
 	if (*s == '+' || *s == '-')
 	{
+        if (ft_strlen(s) == 1)
+            return (false);
 		if (*s++ == '-')
 			minus = -1;
 	}
