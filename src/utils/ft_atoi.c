@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-//this atoi is have to use after ft_isInt
+//this atoi is have to use after ft_is_int
 int	ft_atoi(char *s)
 {
 	long	result;

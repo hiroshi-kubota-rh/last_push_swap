@@ -1,7 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME		:= push_swap
-HEADERPATH	:= ./include/push_swap.h
 
 SRSC =	src/main.c \
 		src/error/error.c \
@@ -40,12 +39,7 @@ SRSC =	src/main.c \
        	src/utils/ft_split.c \
 		src/utils/ft_strlen.c
 
-
-
-
-
 OBJS := $(SRSC:.c=.o)
-
 
 all: $(NAME)
 
@@ -61,8 +55,7 @@ fclean:
 	@rm	-f $(NAME)
 	@rm -f $(OBJS)
 
-re:
-
+re: fclean all
 
 %.o: %.c $(HEADERPATH)
 	$(CC) $(CFLAGS) -c -I./include -o $@ $<

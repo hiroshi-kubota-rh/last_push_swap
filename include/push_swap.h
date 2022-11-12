@@ -82,7 +82,7 @@ void			check_argc(int argc, int *input_type);
 void			set_num_array(char **argv, t_info *info);
 void			set_num_array_len(t_info *info, int argc);
 bool			check_num_array(t_info *info);
-bool			ft_isSameNum(int *num, size_t len);
+bool			ft_is_same_num(int *num, size_t len);
 void			fill_stack_a(t_node **head_a, t_info *info);
 void			make_stack(int argc, char **argv, t_node **head_a, \
 		t_info *info);
@@ -92,7 +92,7 @@ bool			check_sorted(t_node *stack);
 /*------------------------- utils folder -------------------------*/
 size_t			ft_strlen(char *str);
 char			**ft_split(char const *s, char c);
-bool			ft_isInt(char *s);
+bool			ft_is_int(char *s);
 int				ft_atoi(char *s);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 

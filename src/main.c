@@ -32,19 +32,11 @@ int	main(int argc, char **argv)
 		else
 			sort(&stack_a, &stack_b, info.num_array_len);
 	}
+	return (0);
+}
 
-
-    //mainから辿れるメモリはメモリリークにならない(leaksコマンドなら)
 //    flash_all_struct(tmp, NULL, &info);
 //    system("leaks push_swap");
 //    flash_all_struct(stack_a, NULL, &info);
 //    system("leaks push_swap");
-    //input_typeが1の時はnum_arrayをfreeする
-}
-
-
-
-
-
-
-
+//    input_typeが1の時はnum_arrayをfreeする

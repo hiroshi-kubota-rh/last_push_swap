@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isint.c                                         :+:      :+:    :+:   */
+/*   ft_is_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khiroshi </var/mail/khiroshi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,7 +13,7 @@
 #include "push_swap.h"
 
 //check the string is only made form number and in the Interger
-bool	ft_isInt(char *s)
+bool	ft_is_int(char *s)
 {
 	long	result;
 	long	minus;
