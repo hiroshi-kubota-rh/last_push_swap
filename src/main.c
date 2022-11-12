@@ -39,4 +39,3 @@ int	main(int argc, char **argv)
 //    system("leaks push_swap");
 //    flash_all_struct(stack_a, NULL, &info);
 //    system("leaks push_swap");
-//    input_typeが1の時はnum_arrayをfreeする
