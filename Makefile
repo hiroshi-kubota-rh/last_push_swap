@@ -41,21 +41,25 @@ SRSC =	src/main.c \
 
 OBJS := $(SRSC:.c=.o)
 
-all: $(NAME)
-
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
+%.o: %.c $(HEADERPATH)
+	$(CC) $(CFLAGS) -c -I./include -o $@ $<
+
+PHONY: all
+all: $(NAME)
+
+PHONY: clean
 clean:
 	@echo "$(_RED)Removing object files....$(_END)"
 	@rm -f $(OBJS)
 
+PHONY: fclean
 fclean:
 	@echo "$(_RED)Removing object files and program....$(_END)"
 	@rm	-f $(NAME)
 	@rm -f $(OBJS)
 
+PHONY: re
 re: fclean all
-
-%.o: %.c $(HEADERPATH)
-	$(CC) $(CFLAGS) -c -I./include -o $@ $<
